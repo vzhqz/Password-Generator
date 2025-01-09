@@ -1,4 +1,5 @@
 
+/* Generates the password itself */
 function generatePassword(length, includeLowerCase, includeUpperCase, includeNumbers, includeSymbols) {
     const lowerCaseChars = "abcdefghijklmnopqrstuvwxyz";
     const upperCaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -28,6 +29,7 @@ function generatePassword(length, includeLowerCase, includeUpperCase, includeNum
 }
 
 
+/* Returns the password onto the webpage */
 function returnPassword() {
     const includeLowerCase = document.getElementById("includeLowerCase").checked;
     const includeUpperCase = document.getElementById("includeUpperCase").checked;
