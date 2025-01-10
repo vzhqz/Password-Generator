@@ -39,5 +39,5 @@ function returnPassword() {
     const passLength = document.getElementById("passLength").value;
     const resultText = document.getElementById("resultText");
     const password = generatePassword(passLength, includeLowerCase, includeUpperCase, includeNumbers, includeSymbols);
-    resultText.textContent = `Generated Password: ${password}`;
+    resultText.innerHTML = `Generated Password: <strong>${password}</strong>`;
 }
