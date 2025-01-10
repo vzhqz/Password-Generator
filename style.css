@@ -50,6 +50,10 @@ button {
     align-items: center;
 }
 
+button:hover {
+    background-color: #dadada;
+}
+
 @property --angle {
     syntax: "<angle>";
     initial-value: 0deg;
