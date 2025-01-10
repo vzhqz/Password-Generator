@@ -42,14 +42,41 @@ button {
     font-size: 1.15em;
     padding: 6px 8px;
     border-radius: 4px;
-    border: 1px solid gray;
+    border: none;
     cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-button:hover {
-    background-color: #dadada
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
 }
 
-button:active {
-    opacity: .8;
+button::after, button::before {
+    content: '';
+    position: absolute;
+    height: 108%;
+    width: 104%;
+    border-radius: 4px;
+    background-image: conic-gradient(from var(--angle), transparent 70%, blue);
+    z-index: -1;
+    animation: 2s spin linear infinite;
+}
+
+button::before {
+    filter: blur(1.5em);
+    opacity: .5;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
 }
