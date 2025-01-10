@@ -1,3 +1,4 @@
+/* Programmed by VZHQZ */
 
 /* Generates the password itself */
 function generatePassword(length, includeLowerCase, includeUpperCase, includeNumbers, includeSymbols) {
